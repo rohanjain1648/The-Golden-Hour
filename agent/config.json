@@ -1,0 +1,110 @@
+{
+  "name": "Bluepoint Golden Hour – Lead Qualifier",
+  "default_agent_language": "hi",
+  "agentStatus": "in-progress",
+  "systempromptType": 1,
+  "default_language": "hi",
+  "silence_language": "hi",
+
+  "model": "callkaro/arjuna-2.5",
+  "secondary_model": "gpt-4.1-mini",
+  "temperature": 3,
+  "caching_strategy": "response",
+  "insert_metadata_in_prompt": true,
+
+  "voice_configuration": {
+    "voice_provider": "Eleven Labs",
+    "voice_name": "Monika Sogam - Lead Qualification Agent",
+    "voice_id": "zmh5xhBvMzqR4ZlXgcgL",
+    "voice_model": "eleven_flash_v2_5",
+    "voice_language": "hi",
+    "voice_speed": 1.0,
+    "voice_stability": 0.5,
+    "voice_similarity_boost": 1,
+    "voice_style": 0.5,
+    "voice_category": "professional"
+  },
+  "secondary_voice_configuration": {
+    "voice_provider": "Sarvam",
+    "voice_id": "simran",
+    "voice_model": "bulbul:v3",
+    "voice_language": "hi-IN",
+    "voice_speed": 1.0
+  },
+  "transcriber": {
+    "transcriber_provider": "Soniox",
+    "transcriber_language": ["hi", "en"],
+    "keywords": ["Bluepoint", "BHK", "RERA", "carpet area", "possession", "site visit", "lakh", "crore"]
+  },
+  "secondary_transcriber": {
+    "transcriber_provider": "Azure",
+    "transcriber_language": ["hi-IN", "en-IN"],
+    "keywords": []
+  },
+
+  "speakfirst": { "value": 1, "message_interruption": true },
+  "speakfirst_inbound": { "value": 1, "message_interruption": false },
+  "initial_pause_outbound": 1,
+  "initial_pause_inbound": 1,
+  "time_limit": 420,
+  "hold_disconnect_timeout": 30,
+  "silence_count": 2,
+  "silence_wait": 8,
+  "silence_mode": "dynamic",
+  "silence_prompts": [],
+  "silence_instructions": "The lead has been silent after your last response. In the language you are currently speaking, generate one brief line to check if they are still on the call.",
+  "end_call_msg": [],
+  "substrings_to_remove": ["<|\"|>thought", "<|\"|>", "<|", "|>", "decomposition", "<turn|>", "<turn>", "</turn>", "<end>", "<eos>", "[DONE]", "<wait>", "end_call()", "end_call"],
+  "bgNoise": true,
+  "bgNoiseVolume": 0.2,
+  "voicemail_msg": false,
+  "voicemail_custom_msg": "",
+  "noise_cancellation": true,
+  "noise_cancellation_strategy": "aicoustics",
+  "noise_cancellation_strength": 0.8,
+  "formatToNumberAsIndian": false,
+  "auto_reschedule": false,
+
+  "conversion_reason": "A site visit was booked: book_site_visit returned status success with a booking reference during the call.",
+  "default_disposition_reason": "No conversation",
+  "post_call_analysis_prompt": "You are preparing a handoff for Bluepoint's human sales closer, who will NOT listen to the recording. Extract only what was actually said in the transcript and what function results show. Never infer a booking, callback or opt-out that did not happen. Booking references and slot labels must be copied exactly from the book_site_visit result. Write text fields in plain English even if the call was in Hindi or Hinglish. If something was not discussed, use the 'unknown' option or leave the text empty.",
+  "postcallmodel": "callkaro/krishna-2.5",
+  "post_call_strategy": {
+    "1-10": "DEFAULT_VALUES",
+    "11-30": "callkaro/krishna-2.5",
+    "31-60": "callkaro/krishna-2.5",
+    ">60": "callkaro/krishna-2.5",
+    "only_agent_turns": "DEFAULT_VALUES"
+  },
+  "secondary_post_call_strategy": {
+    "1-10": "DEFAULT_VALUES",
+    "11-30": "gpt-6-luna",
+    "31-60": "gpt-6-luna",
+    ">60": "gpt-6-luna",
+    "only_agent_turns": "DEFAULT_VALUES"
+  },
+  "postcall": [
+    { "type": "selector", "name": "outcome", "description": "The single outcome of the call. One of: site_visit_booked (book_site_visit succeeded), human_callback_requested (lead asked for a call from the sales manager at a time), callback_scheduled (lead was busy and gave a time to call back), nurture_follow_up (interested but later, agreed to a follow-up), not_interested, opted_out (asked not to be called again / remove number), wrong_person (did not make the enquiry or was not the lead), no_conversation (no meaningful conversation).", "defaultValue": "no_conversation", "defaultValueConfig": { "source": "static_value", "key": "", "other": false } },
+    { "type": "boolean", "name": "opted_out", "description": "True only if the lead explicitly asked not to be called again, to stop calling, or to remove their number.", "defaultValue": false, "defaultValueConfig": { "source": "static_value", "key": "", "other": false } },
+    { "type": "text", "name": "site_visit_booking_ref", "description": "The booking reference returned by book_site_visit (like BV-7Q2K), copied exactly. Empty if no booking succeeded.", "defaultValue": "", "defaultValueConfig": { "source": "static_value", "key": "", "other": false } },
+    { "type": "text", "name": "site_visit_slot", "description": "The booked slot label exactly as returned by book_site_visit, plus number of visitors. Empty if none.", "defaultValue": "", "defaultValueConfig": { "source": "static_value", "key": "", "other": false } },
+    { "type": "text", "name": "callback_time", "description": "Day and time the lead asked to be called back (by the agent or the sales manager), in the lead's words. Empty if none.", "defaultValue": "", "defaultValueConfig": { "source": "static_value", "key": "", "other": false } },
+    { "type": "text", "name": "budget_confirmed", "description": "The budget the lead confirmed or stated on the call, and whether it is flexible, e.g. '1 crore, can stretch to 1.05'. Empty if not discussed.", "defaultValue": "", "defaultValueConfig": { "source": "static_value", "key": "", "other": false } },
+    { "type": "selector", "name": "budget_fit", "description": "Does a configuration of this property fit the lead's confirmed budget, based on what was said? One of: fits, stretch, below_range, unknown.", "defaultValue": "unknown", "defaultValueConfig": { "source": "static_value", "key": "", "other": false } },
+    { "type": "text", "name": "config_interest", "description": "The configuration the lead wants (e.g. '2 BHK', '4 BHK villa'). Empty if unknown.", "defaultValue": "", "defaultValueConfig": { "source": "static_value", "key": "", "other": false } },
+    { "type": "selector", "name": "buyer_purpose", "description": "Why the lead is buying. One of: self_use, investment, both, unknown.", "defaultValue": "unknown", "defaultValueConfig": { "source": "static_value", "key": "", "other": false } },
+    { "type": "selector", "name": "purchase_timeline", "description": "When the lead plans to buy or move. One of: 0_3_months, 3_6_months, 6_12_months, over_12_months, unknown.", "defaultValue": "unknown", "defaultValueConfig": { "source": "static_value", "key": "", "other": false } },
+    { "type": "selector", "name": "home_loan", "description": "Financing. One of: needed, not_needed, undecided, unknown.", "defaultValue": "unknown", "defaultValueConfig": { "source": "static_value", "key": "", "other": false } },
+    { "type": "text", "name": "objections_raised", "description": "Each objection or concern the lead raised and, briefly, how the agent answered it, e.g. 'Price high -> showed 2 BHK fits; Possession delay -> RERA date Dec 2027'. Empty if none.", "defaultValue": "", "defaultValueConfig": { "source": "static_value", "key": "", "other": false } },
+    { "type": "text", "name": "unanswered_questions", "description": "Questions the agent could not answer from its data and promised the sales manager would confirm. The closer must answer these. Empty if none.", "defaultValue": "", "defaultValueConfig": { "source": "static_value", "key": "", "other": false } },
+    { "type": "text", "name": "competitors_mentioned", "description": "Other builders or projects the lead mentioned, with any price they quoted. Empty if none.", "defaultValue": "", "defaultValueConfig": { "source": "static_value", "key": "", "other": false } },
+    { "type": "selector", "name": "language_used", "description": "Main language the conversation ended up in. One of: hinglish, english, hindi, other.", "defaultValue": "hinglish", "defaultValueConfig": { "source": "static_value", "key": "", "other": false } },
+    { "type": "text", "name": "closer_summary", "description": "2-3 plain-English sentences for the human closer: who the lead is, what they want, what happened on the call, and the agreed next step. Factual, no hype.", "defaultValue": "", "defaultValueConfig": { "source": "static_value", "key": "", "other": false } },
+    { "type": "text", "name": "next_best_action", "description": "The single most useful next action for the human closer, e.g. 'Confirm visit on Sat 11 AM; bring loan eligibility for HDFC' or 'Call Thursday 7 PM; lead wants 3 BHK floor plans'.", "defaultValue": "", "defaultValueConfig": { "source": "static_value", "key": "", "other": false } },
+    { "type": "number", "name": "lead_score", "description": "Always output 0. This is computed after the call by the handoff function.", "defaultValue": 0, "defaultValueConfig": { "source": "static_value", "key": "", "other": false } },
+    { "type": "text", "name": "lead_temperature", "description": "Always leave empty. Computed after the call by the handoff function.", "defaultValue": "", "defaultValueConfig": { "source": "static_value", "key": "", "other": false } },
+    { "type": "text", "name": "lead_priority", "description": "Always leave empty. Computed after the call by the handoff function.", "defaultValue": "", "defaultValueConfig": { "source": "static_value", "key": "", "other": false } }
+  ],
+  "webhook": "",
+  "webhook_headers": []
+}
