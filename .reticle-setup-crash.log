@@ -1,0 +1,11 @@
+Error: EPIPE: broken pipe, write
+    at Socket._write (node:internal/net:63:18)
+    at writeOrBuffer (node:internal/streams/writable:572:12)
+    at _write (node:internal/streams/writable:501:10)
+    at Writable.write (node:internal/streams/writable:510:10)
+    at log (file:///D:/downloads/trafy/.npm-cache/_npx/f403495c3e985d95/node_modules/@reticlehq/server/dist/log.js:17:20)
+    at proxyLog (file:///D:/downloads/trafy/.npm-cache/_npx/f403495c3e985d95/node_modules/@reticlehq/server/dist/surface/mcp/proxy/proxy-log.js:95:5)
+    at absorbExpected (file:///D:/downloads/trafy/.npm-cache/_npx/f403495c3e985d95/node_modules/@reticlehq/server/dist/command/daemon/daemon-resilience.js:92:5)
+    at absorb (file:///D:/downloads/trafy/.npm-cache/_npx/f403495c3e985d95/node_modules/@reticlehq/server/dist/command/daemon/daemon-resilience.js:305:31)
+    at Socket.onClientPipeError (file:///D:/downloads/trafy/.npm-cache/_npx/f403495c3e985d95/node_modules/@reticlehq/server/dist/command/daemon/daemon-resilience.js:307:14)
+    at Socket.emit (node:events:518:28)
