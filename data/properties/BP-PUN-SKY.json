@@ -1,0 +1,24 @@
+{
+  "property_id": "BP-PUN-SKY",
+  "property_name": "Bluepoint Skyline Residences",
+  "property_type": "apartments",
+  "city": "Pune",
+  "locality": "Kharadi",
+  "units_json": [
+    { "config": "2 BHK", "carpet_sqft": 760, "price_min_inr": 9200000, "price_max_inr": 10400000 },
+    { "config": "3 BHK", "carpet_sqft": 1085, "price_min_inr": 13800000, "price_max_inr": 15200000 }
+  ],
+  "price_basis": "all-inclusive of GST and one covered parking; stamp duty and registration are extra",
+  "construction_status": "under construction: Tower A slab work at the 14th of 22 floors, Tower B at the 9th floor (as of November 2026)",
+  "possession": "December 2027, the completion date registered with MahaRERA",
+  "rera_id": "P52100099871",
+  "amenities": "rooftop infinity pool, clubhouse with gym, co-working lounge, kids' play area, EV charging in every parking level",
+  "location_highlights": "5 minutes from EON IT Park; about 25 minutes to Pune airport; schools and a multi-specialty hospital within 3 km; near the proposed Kharadi–Hadapsar metro line (not yet built; no completion date announced)",
+  "payment_plan": "construction-linked plan: 10% on booking, 80% in stages as construction progresses, 10% on possession",
+  "loan_partners": "home loans pre-approved for this project by SBI, HDFC Bank and ICICI Bank",
+  "current_offer": "",
+  "offer_valid_till": "",
+  "inventory_fact": "",
+  "site_address": "Bluepoint Skyline sales gallery, Kharadi–Mundhwa Road, Kharadi, Pune",
+  "sales_manager_name": "Nikhil Kulkarni"
+}

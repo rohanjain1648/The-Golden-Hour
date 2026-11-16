@@ -1,0 +1,24 @@
+﻿{
+  "property_id": "BP-BLR-PALM",
+  "property_name": "Bluepoint Palm Grove Villas",
+  "property_type": "villas",
+  "city": "Bengaluru",
+  "locality": "Sarjapur Road",
+  "units_json": [
+    { "config": "3 BHK villa", "carpet_sqft": 2150, "area_type": "built-up", "price_min_inr": 23500000, "price_max_inr": 26000000 },
+    { "config": "4 BHK villa", "carpet_sqft": 2900, "area_type": "built-up", "price_min_inr": 32500000, "price_max_inr": 36000000 }
+  ],
+  "price_basis": "all-inclusive of the plot, construction, GST and club membership; stamp duty and registration are extra unless the current offer covers them",
+  "construction_status": "ready to move in; Occupancy Certificate received in March 2026",
+  "possession": "immediate: registration and handover within 45 days of booking",
+  "rera_id": "PRM/KA/RERA/1251/308/PR/230915/006218",
+  "amenities": "private garden with every villa, clubhouse with pool and gym, tennis court, 2-acre central park, 24x7 gated security",
+  "location_highlights": "10 minutes from the Sarjapur Road IT corridor; three international schools within 5 km; about 35 minutes to Outer Ring Road at Bellandur",
+  "payment_plan": "ready-to-move plan: 20% on booking, 80% at registration",
+  "loan_partners": "home loans available from HDFC Bank and Axis Bank",
+  "current_offer": "Bluepoint pays the stamp duty for villas booked on or before 30 November 2026",
+  "offer_valid_till": "2026-11-30",
+  "inventory_fact": "6 of the 48 villas are unsold: four 3 BHK and two 4 BHK (sales register, 15 November 2026)",
+  "site_address": "Bluepoint Palm Grove experience centre, off Sarjapur Main Road, near Dommasandra Circle, Bengaluru",
+  "sales_manager_name": "Kavitha Rao"
+}
