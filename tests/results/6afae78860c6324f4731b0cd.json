@@ -1,0 +1,289 @@
+[
+  {
+    "_id": "6afae788800d8800015304d2",
+    "simulationbatchId": "6afae78860c6324f4731b0cd",
+    "testcaseId": {
+      "_id": "6afae747304087b932c605b7",
+      "testcaseName": "[P3][HAPPY:site_visit_booked] Pune family buyer, Hinglish, books Saturday visit"
+    },
+    "agentId": null,
+    "userId": "6afae43a02881e33c0efa2f0",
+    "versionId": {
+      "_id": "6afae6648efa21df5367c3e2",
+      "versionName": "v1"
+    },
+    "total_turns": 11,
+    "ended_by": "user_hangup",
+    "duration_seconds": 183.8,
+    "simulation_seconds": 15.78,
+    "agent_model": "gemma26",
+    "simulator_model": "gpt-5.6-luna",
+    "use_mock_functions": false,
+    "agent_cost": 4.239,
+    "simulator_cost": 0.59266,
+    "analysis_cost": 0.241723,
+    "total_cost": 5.073383000000001,
+    "functions_called": [
+      {
+        "name": "prepare_call_context",
+        "timestamp": "2026-11-16T16:52:48.509307+05:30",
+        "success": true,
+        "error": null,
+        "is_mock": true
+      }
+    ],
+    "transcript": [
+      {
+        "role": "agent",
+        "content": "Hello.",
+        "timestamp": "2026-11-16T16:52:48.515881+05:30",
+        "function_calls": []
+      },
+      {
+        "role": "user",
+        "content": "Hello?",
+        "timestamp": "2026-11-16T16:52:49.403817+05:30"
+      },
+      {
+        "role": "agent",
+        "content": "Good afternoon, Rohan! Main Ananya bol rahi hoon Bluepoint Homes se. Aapne 99acres par Bluepoint Skyline Residences, Kharadi ke liye enquiry ki thi, toh kya yeh baat karne ke liye sahi time hai?",
+        "timestamp": "2026-11-16T16:52:49.904265+05:30",
+        "function_calls": []
+      },
+      {
+        "role": "user",
+        "content": "Haan, bolo, 2 minute hai.",
+        "timestamp": "2026-11-16T16:52:50.849383+05:30"
+      },
+      {
+        "role": "agent",
+        "content": "Thank you! Aapne 2 BHK ke liye interest dikhaya tha, toh main bas confirm karna chahti thi ki kya aap yeh apne family ke liye dekh rahe hain ya investment ke liye?",
+        "timestamp": "2026-11-16T16:52:51.240242+05:30",
+        "function_calls": []
+      },
+      {
+        "role": "user",
+        "content": "Family ke liye, rehne ke purpose se dekh raha hoon.",
+        "timestamp": "2026-11-16T16:52:52.236722+05:30"
+      },
+      {
+        "role": "agent",
+        "content": "Samajh gayi, family ke liye rehne ke liye. Aur aapka budget ₹1 crore tha, toh kya yeh flexible hai ya aap isi range mein dekh rahe hain?",
+        "timestamp": "2026-11-16T16:52:52.558978+05:30",
+        "function_calls": []
+      },
+      {
+        "role": "user",
+        "content": "Ek crore tak hai, thoda stretch kar sakta hoon, lekin 1.05 crore se zyada nahi.",
+        "timestamp": "2026-11-16T16:52:53.697577+05:30"
+      },
+      {
+        "role": "agent",
+        "content": "Theek hai, toh ₹1.05 crore tak ka budget hai. Bluepoint Skyline mein 2 BHK ka price ₹92 lakh se ₹1.04 crore ke beech hai, toh yeh aapke budget mein perfectly fit hoga. \n\nAap kab tak move-in ya possession lene ka plan kar rahe hain?",
+        "timestamp": "2026-11-16T16:52:54.259101+05:30",
+        "function_calls": []
+      },
+      {
+        "role": "user",
+        "content": "Lagbhag ek saal ke andar move-in karna hai. Waise possession kab tak milega?",
+        "timestamp": "2026-11-16T16:52:55.232833+05:30"
+      },
+      {
+        "role": "agent",
+        "content": "Actually, possession December 2027 mein scheduled hai, jo aapke ek saal wale plan se thoda zyada hai. \n\nLekin iska location bahut achha hai, EON IT Park se sirf 5 minutes ki doori par hai aur aas-paas schools aur hospitals bhi hain. Kya aap ek baar site visit karke dekhna chahenge?",
+        "timestamp": "2026-11-16T16:52:55.728006+05:30",
+        "function_calls": []
+      },
+      {
+        "role": "user",
+        "content": "Haan, Saturday ko dekh sakte hain.",
+        "timestamp": "2026-11-16T16:52:56.846715+05:30"
+      },
+      {
+        "role": "agent",
+        "content": "Zaroor! Ek second, main check karti hoon. Saturday, 21 November ko hamare paas do slots available hain: ek subah 11 AM par aur doosra shaam ko 4 PM par. Aapko kaunsa time suit karega?",
+        "timestamp": "2026-11-16T16:52:57.570839+05:30",
+        "function_calls": [
+          {
+            "name": "check_visit_slots",
+            "arguments": {
+              "preferred_day": "saturday",
+              "property_id": "BP-PUN-SKY"
+            },
+            "result": {
+              "status": "success",
+              "slots": [
+                {
+                  "slot_id": 21,
+                  "label": "Saturday, 21 November, 11 AM"
+                },
+                {
+                  "slot_id": 23,
+                  "label": "Saturday, 21 November, 4 PM"
+                }
+              ],
+              "note": "Offer only these slots, exactly as labelled."
+            },
+            "is_mock": true
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": "11 baje theek rahega.",
+        "timestamp": "2026-11-16T16:52:58.556810+05:30"
+      },
+      {
+        "role": "agent",
+        "content": "Perfect! Aapke saath aur kaun kaun aayega site visit ke liye?",
+        "timestamp": "2026-11-16T16:52:58.787477+05:30",
+        "function_calls": []
+      },
+      {
+        "role": "user",
+        "content": "Hum do log aayenge, main aur meri wife.",
+        "timestamp": "2026-11-16T16:52:59.865571+05:30"
+      },
+      {
+        "role": "agent",
+        "content": "Done! Aapki visit Saturday, 21 November ko 11 AM ke liye book ho gayi hai, aur aapka booking reference hai BV seven Q two K. Hamare sales manager, Nikhil Kulkarni, wahan aapka wait karenge. \n\nKya main aapki koi aur help kar sakti hoon, ya hum call end karein?\n\nend_call<turn|>",
+        "timestamp": "2026-11-16T16:53:00.868910+05:30",
+        "function_calls": [
+          {
+            "name": "book_site_visit",
+            "arguments": {
+              "notes": "2 BHK, budget around 1 crore, purpose: self-use/family, wants possession soon.",
+              "property_id": "BP-PUN-SKY",
+              "slot_id": 21,
+              "visitor_name": "Rohan",
+              "visitors": 2
+            },
+            "result": {
+              "status": "success",
+              "booking_ref": "BV-7Q2K",
+              "slot_label": "Saturday, 21 November, 11 AM",
+              "visitors": 2
+            },
+            "is_mock": true
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": "Perfect, thank you.",
+        "timestamp": "2026-11-16T16:53:01.880414+05:30"
+      },
+      {
+        "role": "agent",
+        "content": "You're welcome, Rohan! Aapki visit Saturday, 21 November ko 11 AM ke liye confirm hai. Thank you, goodbye!\n\nend_call",
+        "timestamp": "2026-11-16T16:53:02.192382+05:30",
+        "function_calls": []
+      },
+      {
+        "role": "user",
+        "content": "Theek hai.",
+        "timestamp": "2026-11-16T16:53:03.193278+05:30"
+      },
+      {
+        "role": "agent",
+        "content": "Theek hai, Rohan. Thank you, goodbye!\n\nend_call",
+        "timestamp": "2026-11-16T16:53:03.400329+05:30",
+        "function_calls": []
+      },
+      {
+        "role": "user",
+        "content": "Theek hai, goodbye.",
+        "timestamp": "2026-11-16T16:53:04.285876+05:30"
+      }
+    ],
+    "post_call": {
+      "outcome": {
+        "value": "site_visit_booked",
+        "comment": "The agent successfully booked a site visit for the lead."
+      },
+      "opted_out": {
+        "value": false,
+        "comment": "L1 decision model, p=0.94"
+      },
+      "site_visit_booking_ref": {
+        "value": "BV-7Q2K",
+        "comment": "Booking reference returned by book_site_visit function."
+      },
+      "site_visit_slot": {
+        "value": "Saturday, 21 November, 11 AM, 2 visitors",
+        "comment": "Slot label and number of visitors confirmed."
+      },
+      "callback_time": {
+        "value": "",
+        "comment": "No callback was requested."
+      },
+      "budget_confirmed": {
+        "value": "1 crore, can stretch to 1.05 crore",
+        "comment": "Lead confirmed budget of 1 crore with a stretch to 1.05 crore."
+      },
+      "budget_fit": {
+        "value": "fits",
+        "comment": "The 2 BHK price range (92L - 1.04Cr) fits within the lead's budget."
+      },
+      "config_interest": {
+        "value": "2 BHK",
+        "comment": "Lead expressed interest in a 2 BHK."
+      },
+      "buyer_purpose": {
+        "value": "self_use",
+        "comment": "Lead stated it is for family to live in."
+      },
+      "purchase_timeline": {
+        "value": "6_12_months",
+        "comment": "Lead mentioned moving in within about a year."
+      },
+      "home_loan": {
+        "value": "unknown",
+        "comment": "Financing was not discussed."
+      },
+      "objections_raised": {
+        "value": "Possession date -> Agent clarified Dec 2027 and highlighted location benefits.",
+        "comment": "Lead wanted possession in a year; agent provided the RERA date."
+      },
+      "unanswered_questions": {
+        "value": "",
+        "comment": "No unanswered questions were left for the sales manager."
+      },
+      "competitors_mentioned": {
+        "value": "",
+        "comment": "No competitors mentioned."
+      },
+      "language_used": {
+        "value": "hinglish",
+        "comment": "The conversation was conducted in a mix of Hindi and English."
+      },
+      "closer_summary": {
+        "value": "Rohan is looking for a 2 BHK for self-use for his family with a budget of up to 1.05 crore. He is interested in Bluepoint Skyline Residences and has booked a site visit for Saturday, Nov 21 at 11 AM for 2 people.",
+        "comment": "Summary of the lead's requirements and the call outcome."
+      },
+      "next_best_action": {
+        "value": "Confirm visit on Saturday 11 AM with Nikhil Kulkarni.",
+        "comment": "The next step is the scheduled site visit."
+      },
+      "lead_score": {
+        "value": 0,
+        "comment": "Default value as per instructions."
+      },
+      "lead_temperature": {
+        "value": "",
+        "comment": "Leave empty as per instructions."
+      },
+      "lead_priority": {
+        "value": "",
+        "comment": "Leave empty as per instructions."
+      }
+    },
+    "analysisStatus": "ok",
+    "isTestSucceed": false,
+    "testResultSummary": "FAIL",
+    "isPerformedLikeUser": true,
+    "createdAt": "2026-11-16T11:23:36.829Z",
+    "updatedAt": "2026-11-16T11:23:36.829Z",
+    "__v": 0
+  }
+]

@@ -1,0 +1,1019 @@
+[
+  {
+    "_id": "6afaf14ca2789900015c4aef",
+    "simulationbatchId": "6afaf14c304087b932c62306",
+    "testcaseId": {
+      "_id": "6afae747304087b932c605b7",
+      "testcaseName": "[P3][HAPPY:site_visit_booked] Pune family buyer, Hinglish, books Saturday visit"
+    },
+    "agentId": null,
+    "userId": "6afae43a02881e33c0efa2f0",
+    "versionId": {
+      "_id": "6afaf148b4ebdc59b459da31",
+      "versionName": "v10-no-ask-and-hangup"
+    },
+    "total_turns": 9,
+    "ended_by": "agent_end_call",
+    "duration_seconds": 169.7,
+    "simulation_seconds": 15.82,
+    "agent_model": "gemma26",
+    "simulator_model": "gpt-5.6-luna",
+    "use_mock_functions": false,
+    "agent_cost": 4.83559,
+    "simulator_cost": 0.47635,
+    "analysis_cost": 0.196421,
+    "total_cost": 5.508361,
+    "functions_called": [
+      {
+        "name": "prepare_call_context",
+        "timestamp": "2026-11-16T17:34:28.688843+05:30",
+        "success": true,
+        "error": null,
+        "is_mock": true
+      }
+    ],
+    "transcript": [
+      {
+        "role": "agent",
+        "content": "Hello.",
+        "timestamp": "2026-11-16T17:34:28.695448+05:30",
+        "function_calls": []
+      },
+      {
+        "role": "user",
+        "content": "Hello?",
+        "timestamp": "2026-11-16T17:34:29.932483+05:30"
+      },
+      {
+        "role": "agent",
+        "content": "Good evening! Rohan ji, main Ananya bol rahi hoon Bluepoint Homes se. Aapne 99acres par Bluepoint Skyline Residences, Kharadi ke liye enquiry ki thi, kya ye baat karne ke liye sahi time hai?",
+        "timestamp": "2026-11-16T17:34:30.561256+05:30",
+        "function_calls": []
+      },
+      {
+        "role": "user",
+        "content": "Haan, bolo, 2 minute hai.",
+        "timestamp": "2026-11-16T17:34:31.507366+05:30"
+      },
+      {
+        "role": "agent",
+        "content": "Thank you! Aapne 2 BHK ke liye enquiry ki thi, toh main bas confirm karna chahti thi ki kya aap ye apne family ke liye dekh rahe hain ya investment ke liye?",
+        "timestamp": "2026-11-16T17:34:32.004255+05:30",
+        "function_calls": []
+      },
+      {
+        "role": "user",
+        "content": "Family ke liye, khud rehne ke liye.",
+        "timestamp": "2026-11-16T17:34:33.071996+05:30"
+      },
+      {
+        "role": "agent",
+        "content": "Samajh gayi, family ke liye hai. Aapne ₹1 crore ka budget bataya tha, toh kya ye budget flexible hai ya aap isi range mein dekh rahe hain?",
+        "timestamp": "2026-11-16T17:34:33.497997+05:30",
+        "function_calls": []
+      },
+      {
+        "role": "user",
+        "content": "Thoda flexible hai, maximum 1.05 crore tak.",
+        "timestamp": "2026-11-16T17:34:34.551101+05:30"
+      },
+      {
+        "role": "agent",
+        "content": "Theek hai, toh 1.05 crore tak ka budget hai. Bluepoint Skyline Residences mein 2 BHK ka price ₹92 lakh se ₹1.04 crore ke beech hai, toh ye aapke budget mein kaafi achhe se fit ho jayega.\n\nAap kab tak possession lene ka soch rahe hain?",
+        "timestamp": "2026-11-16T17:34:35.239429+05:30",
+        "function_calls": []
+      },
+      {
+        "role": "user",
+        "content": "Theek hai, aur possession kab tak milega?",
+        "timestamp": "2026-11-16T17:34:36.320734+05:30"
+      },
+      {
+        "role": "agent",
+        "content": "Iska possession December 2027 mein hoga, jo ki MahaRERA ke saath registered hai.\n\nKharadi mein location kaafi achhi hai, EON IT Park yahan se sirf 5 minutes ki doori par hai. Kya aapko location sahi lag rahi hai?",
+        "timestamp": "2026-11-16T17:34:36.809082+05:30",
+        "function_calls": []
+      },
+      {
+        "role": "user",
+        "content": "Haan, location theek lag rahi hai. Main EON IT Park mein kaam karta hoon.",
+        "timestamp": "2026-11-16T17:34:37.927853+05:30"
+      },
+      {
+        "role": "agent",
+        "content": "Wah, phir toh aapke liye commute bahut easy ho jayega! \n\nWahan amenities bhi kaafi achhi hain, jaise rooftop infinity pool aur kids' play area. Kya aap ek baar site visit karke project dekhna chahenge?",
+        "timestamp": "2026-11-16T17:34:38.444575+05:30",
+        "function_calls": []
+      },
+      {
+        "role": "user",
+        "content": "Haan, Saturday ko dekh sakte hain.",
+        "timestamp": "2026-11-16T17:34:39.477977+05:30"
+      },
+      {
+        "role": "agent",
+        "content": "Ek second, main check karti hoon. Saturday ke liye hamare paas do slots available hain: ek subah 11 AM par aur dusra shaam ko 4 PM par. Aapko kaunsa time suit karega?",
+        "timestamp": "2026-11-16T17:34:40.405838+05:30",
+        "function_calls": [
+          {
+            "name": "check_visit_slots",
+            "arguments": {
+              "preferred_day": "saturday",
+              "property_id": "BP-PUN-SKY"
+            },
+            "result": {
+              "status": "success",
+              "slots": [
+                {
+                  "slot_id": 21,
+                  "label": "Saturday, 21 November, 11 AM"
+                },
+                {
+                  "slot_id": 23,
+                  "label": "Saturday, 21 November, 4 PM"
+                }
+              ],
+              "note": "Offer only these slots, exactly as labelled."
+            },
+            "is_mock": true
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": "11 baje theek rahega.",
+        "timestamp": "2026-11-16T17:34:41.633022+05:30"
+      },
+      {
+        "role": "agent",
+        "content": "Theek hai. Kya aapke saath koi aur bhi aayega site visit ke liye?",
+        "timestamp": "2026-11-16T17:34:41.879709+05:30",
+        "function_calls": []
+      },
+      {
+        "role": "user",
+        "content": "Hum do log aayenge, main aur meri wife.",
+        "timestamp": "2026-11-16T17:34:42.982418+05:30"
+      },
+      {
+        "role": "agent",
+        "content": "Perfect! Aapka visit Saturday, 21 November ko 11 AM ke liye book ho gaya hai, aur aapka booking reference hai B V 7 Q 2 K. Hamare sales manager, Nikhil Kulkarni ji, wahan aapka wait karenge. Thank you, goodbye!",
+        "timestamp": "2026-11-16T17:34:44.508184+05:30",
+        "function_calls": [
+          {
+            "name": "book_site_visit",
+            "arguments": {
+              "notes": "2 BHK, budget around 1 crore, for self-use (family).",
+              "property_id": "BP-PUN-SKY",
+              "slot_id": 21,
+              "visitor_name": "Rohan",
+              "visitors": 2
+            },
+            "result": {
+              "status": "success",
+              "booking_ref": "BV-7Q2K",
+              "slot_label": "Saturday, 21 November, 11 AM",
+              "visitors": 2,
+              "booking_ref_spoken": "B V 7 Q 2 K"
+            },
+            "is_mock": true
+          },
+          {
+            "name": "end_call",
+            "result": {
+              "status": "call_ended"
+            },
+            "is_mock": true
+          }
+        ]
+      }
+    ],
+    "post_call": {
+      "outcome": {
+        "value": "site_visit_booked",
+        "comment": "The agent successfully booked a site visit for the lead."
+      },
+      "opted_out": {
+        "value": false,
+        "comment": "L1 decision model, p=0.94"
+      },
+      "site_visit_booking_ref": {
+        "value": "BV-7Q2K",
+        "comment": "Booking reference returned by book_site_visit."
+      },
+      "site_visit_slot": {
+        "value": "Saturday, 21 November, 11 AM, 2 visitors",
+        "comment": "Slot label and number of visitors confirmed."
+      },
+      "callback_time": {
+        "value": "",
+        "comment": "No callback was requested."
+      },
+      "budget_confirmed": {
+        "value": "1 crore, flexible up to 1.05 crore",
+        "comment": "Lead confirmed budget of 1 crore and flexibility up to 1.05 crore."
+      },
+      "budget_fit": {
+        "value": "fits",
+        "comment": "The 2 BHK price range (92L - 1.04Cr) fits within the lead's budget."
+      },
+      "config_interest": {
+        "value": "2 BHK",
+        "comment": "Lead expressed interest in a 2 BHK."
+      },
+      "buyer_purpose": {
+        "value": "self_use",
+        "comment": "Lead stated it is for family to live in."
+      },
+      "purchase_timeline": {
+        "value": "unknown",
+        "comment": "Timeline was not discussed."
+      },
+      "home_loan": {
+        "value": "unknown",
+        "comment": "Financing was not discussed."
+      },
+      "objections_raised": {
+        "value": "",
+        "comment": "No objections were raised."
+      },
+      "unanswered_questions": {
+        "value": "",
+        "comment": "All questions were answered by the agent."
+      },
+      "competitors_mentioned": {
+        "value": "",
+        "comment": "No competitors mentioned."
+      },
+      "language_used": {
+        "value": "hinglish",
+        "comment": "The conversation was conducted in Hinglish."
+      },
+      "closer_summary": {
+        "value": "Rohan is looking for a 2 BHK for self-use for his family. He has a budget of 1 crore (flexible to 1.05 crore) and works at EON IT Park. A site visit is booked for Saturday, Nov 21 at 11 AM for 2 people.",
+        "comment": "Summary of the lead's profile and call outcome."
+      },
+      "next_best_action": {
+        "value": "Confirm visit on Saturday 11 AM; Sales Manager Nikhil Kulkarni to meet Rohan and his wife.",
+        "comment": "Immediate next step for the closer."
+      },
+      "lead_score": {
+        "value": 0,
+        "comment": "Default value."
+      },
+      "lead_temperature": {
+        "value": "",
+        "comment": "Computed after call."
+      },
+      "lead_priority": {
+        "value": "",
+        "comment": "Computed after call."
+      }
+    },
+    "analysisStatus": "ok",
+    "isTestSucceed": false,
+    "testResultSummary": "PASS: All success criteria met. Opening was correct, budget and config were confirmed, price range and possession date were accurate, function calls for slots and booking were executed correctly in sequence, and the agent followed all constraints including language and closing protocol.",
+    "isPerformedLikeUser": true,
+    "createdAt": "2026-11-16T12:05:17.680Z",
+    "updatedAt": "2026-11-16T12:05:17.680Z",
+    "__v": 0
+  },
+  {
+    "_id": "6afaf14ca2789900015c4af0",
+    "simulationbatchId": "6afaf14c304087b932c62306",
+    "testcaseId": {
+      "_id": "6afae74b02881e33c0efafd0",
+      "testcaseName": "[P0][FN:book_site_visit][ERROR] Booking system down: no invented booking, offers sales-manager call"
+    },
+    "agentId": null,
+    "userId": "6afae43a02881e33c0efa2f0",
+    "versionId": {
+      "_id": "6afaf148b4ebdc59b459da31",
+      "versionName": "v10-no-ask-and-hangup"
+    },
+    "total_turns": 5,
+    "ended_by": "agent_end_call",
+    "duration_seconds": 87.7,
+    "simulation_seconds": 9.26,
+    "agent_model": "gemma26",
+    "simulator_model": "gpt-5.6-luna",
+    "use_mock_functions": false,
+    "agent_cost": 3.16408,
+    "simulator_cost": 0.22976,
+    "analysis_cost": 0.151887,
+    "total_cost": 3.545727,
+    "functions_called": [
+      {
+        "name": "prepare_call_context",
+        "timestamp": "2026-11-16T17:34:28.697886+05:30",
+        "success": true,
+        "error": null,
+        "is_mock": true
+      }
+    ],
+    "transcript": [
+      {
+        "role": "agent",
+        "content": "Hello.",
+        "timestamp": "2026-11-16T17:34:28.704135+05:30",
+        "function_calls": []
+      },
+      {
+        "role": "user",
+        "content": "Haan bolo, time hai.",
+        "timestamp": "2026-11-16T17:34:29.698567+05:30"
+      },
+      {
+        "role": "agent",
+        "content": "Good evening, Rohan ji! Main Bluepoint Homes se Ananya bol rahi hoon. Aapne 99acres par Bluepoint Skyline Residences, Kharadi ke liye enquiry ki thi, toh kya main do minute le sakti hoon?",
+        "timestamp": "2026-11-16T17:34:30.462760+05:30",
+        "function_calls": []
+      },
+      {
+        "role": "user",
+        "content": "Haan, bolo. Main site dekhna chahta hoon, Saturday ko.",
+        "timestamp": "2026-11-16T17:34:31.484554+05:30"
+      },
+      {
+        "role": "agent",
+        "content": "Zaroor, main site visit ke liye slots check kar leti hoon. Ek second, dekhti hoon. Saturday, 21 November ko hamare paas do slots available hain: ek subah 11 AM par aur doosra shaam 4 PM par. Aapko kaunsa time suit karega?",
+        "timestamp": "2026-11-16T17:34:32.614990+05:30",
+        "function_calls": [
+          {
+            "name": "check_visit_slots",
+            "arguments": {
+              "preferred_day": "saturday",
+              "property_id": "BP-PUN-SKY"
+            },
+            "result": {
+              "status": "success",
+              "slots": [
+                {
+                  "slot_id": 21,
+                  "label": "Saturday, 21 November, 11 AM"
+                },
+                {
+                  "slot_id": 23,
+                  "label": "Saturday, 21 November, 4 PM"
+                }
+              ],
+              "note": "Offer only these slots, exactly as labelled."
+            },
+            "is_mock": true
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": "11 baje.",
+        "timestamp": "2026-11-16T17:34:33.655224+05:30"
+      },
+      {
+        "role": "agent",
+        "content": "Sahi hai. Kya aapke saath koi aur bhi aayega, ya aap akele hi visit karenge?",
+        "timestamp": "2026-11-16T17:34:33.977762+05:30",
+        "function_calls": []
+      },
+      {
+        "role": "user",
+        "content": "Do log.",
+        "timestamp": "2026-11-16T17:34:35.080597+05:30"
+      },
+      {
+        "role": "agent",
+        "content": "Maaf kijiye, booking abhi system mein nahi ho payi, isliye koi slot hold nahi hua hai. Kya Nikhil Kulkarni ji aapko call karke visit ka time fix kar sakte hain? Aap bata dijiye ki unhe kab call karna chahiye.",
+        "timestamp": "2026-11-16T17:34:36.209789+05:30",
+        "function_calls": [
+          {
+            "name": "book_site_visit",
+            "arguments": {
+              "notes": "2 BHK, budget 1 crore, interested in site visit.",
+              "property_id": "BP-PUN-SKY",
+              "slot_id": 21,
+              "visitor_name": "Rohan",
+              "visitors": 2
+            },
+            "result": {
+              "status": "error",
+              "message": "Booking system unreachable: connection timed out"
+            },
+            "is_mock": true
+          }
+        ]
+      },
+      {
+        "role": "user",
+        "content": "Haan, aaj shaam 6 baje call karwa do.",
+        "timestamp": "2026-11-16T17:34:37.301000+05:30"
+      },
+      {
+        "role": "agent",
+        "content": "Theek hai, maine note kar liya hai ki Nikhil ji aaj shaam 6 baje aapko call karenge visit fix karne ke liye. Thank you, bye!",
+        "timestamp": "2026-11-16T17:34:37.956945+05:30",
+        "function_calls": [
+          {
+            "name": "end_call",
+            "result": {
+              "status": "call_ended"
+            },
+            "is_mock": true
+          }
+        ]
+      }
+    ],
+    "post_call": {
+      "outcome": {
+        "value": "human_callback_requested",
+        "comment": "The lead agreed to a call from the sales manager (Nikhil Kulkarni) today at 6 PM after the booking failed."
+      },
+      "opted_out": {
+        "value": false,
+        "comment": "L1 decision model, p=0.94"
+      },
+      "site_visit_booking_ref": {
+        "value": "",
+        "comment": "Booking failed due to system error; no reference generated."
+      },
+      "site_visit_slot": {
+        "value": "",
+        "comment": "No slot was successfully booked."
+      },
+      "callback_time": {
+        "value": "aaj shaam 6 baje",
+        "comment": "Lead requested a call today at 6 PM."
+      },
+      "budget_confirmed": {
+        "value": "",
+        "comment": "Budget was not discussed in the conversation."
+      },
+      "budget_fit": {
+        "value": "unknown",
+        "comment": "Budget not discussed."
+      },
+      "config_interest": {
+        "value": "",
+        "comment": "Configuration not discussed."
+      },
+      "buyer_purpose": {
+        "value": "unknown",
+        "comment": "Not mentioned."
+      },
+      "purchase_timeline": {
+        "value": "unknown",
+        "comment": "Not mentioned."
+      },
+      "home_loan": {
+        "value": "unknown",
+        "comment": "Not mentioned."
+      },
+      "objections_raised": {
+        "value": "",
+        "comment": "No objections raised; only a system error occurred."
+      },
+      "unanswered_questions": {
+        "value": "",
+        "comment": "No questions asked by the lead."
+      },
+      "competitors_mentioned": {
+        "value": "",
+        "comment": "None mentioned."
+      },
+      "language_used": {
+        "value": "hinglish",
+        "comment": "The conversation was conducted in a mix of Hindi and English."
+      },
+      "closer_summary": {
+        "value": "Rohan wants to visit the site this Saturday. The automated booking for 11 AM failed due to a system error. He has agreed to a callback from the sales manager today at 6 PM to finalize the visit.",
+        "comment": "Factual summary of the interaction."
+      },
+      "next_best_action": {
+        "value": "Call Rohan today at 6 PM to manually schedule the site visit for Saturday.",
+        "comment": "Direct action based on the agreed callback time."
+      },
+      "lead_score": {
+        "value": 0,
+        "comment": "Default value."
+      },
+      "lead_temperature": {
+        "value": "",
+        "comment": "Computed after call."
+      },
+      "lead_priority": {
+        "value": "",
+        "comment": "Computed after call."
+      }
+    },
+    "analysisStatus": "ok",
+    "isTestSucceed": false,
+    "testResultSummary": "FAIL",
+    "isPerformedLikeUser": true,
+    "createdAt": "2026-11-16T12:05:10.382Z",
+    "updatedAt": "2026-11-16T12:05:10.382Z",
+    "__v": 0
+  },
+  {
+    "_id": "6afaf14ca2789900015c4af2",
+    "simulationbatchId": "6afaf14c304087b932c62306",
+    "testcaseId": {
+      "_id": "6afae74d8efa21df5367c7d5",
+      "testcaseName": "[P0][U5:wrong-party][OK] Father answers Rohan's phone; no enquiry details disclosed"
+    },
+    "agentId": null,
+    "userId": "6afae43a02881e33c0efa2f0",
+    "versionId": {
+      "_id": "6afaf148b4ebdc59b459da31",
+      "versionName": "v10-no-ask-and-hangup"
+    },
+    "total_turns": 3,
+    "ended_by": "agent_end_call",
+    "duration_seconds": 58.9,
+    "simulation_seconds": 4.89,
+    "agent_model": "gemma26",
+    "simulator_model": "gpt-5.6-luna",
+    "use_mock_functions": false,
+    "agent_cost": 1.5284,
+    "simulator_cost": 0.091205,
+    "analysis_cost": 0.134736,
+    "total_cost": 1.754341,
+    "functions_called": [
+      {
+        "name": "prepare_call_context",
+        "timestamp": "2026-11-16T17:34:28.714284+05:30",
+        "success": true,
+        "error": null,
+        "is_mock": true
+      }
+    ],
+    "transcript": [
+      {
+        "role": "agent",
+        "content": "Hello.",
+        "timestamp": "2026-11-16T17:34:28.721684+05:30",
+        "function_calls": []
+      },
+      {
+        "role": "user",
+        "content": "Haan ji, main Rohan ka papa bol raha hoon. Rohan abhi bahar gaya hai. Kya kaam hai?",
+        "timestamp": "2026-11-16T17:34:29.850211+05:30"
+      },
+      {
+        "role": "agent",
+        "content": "Oh, I am sorry. Main Bluepoint Homes se baat kar rahi hoon Rohan ke liye. Kya aap bata sakte hain ki unse kab baat ho sakegi?",
+        "timestamp": "2026-11-16T17:34:30.344641+05:30",
+        "function_calls": []
+      },
+      {
+        "role": "user",
+        "content": "Shaam ko 8 baje ke baad. Waise kaunsa flat hai? Kitne ka hai? Mujhe bata do, main bata dunga usko.",
+        "timestamp": "2026-11-16T17:34:31.437699+05:30"
+      },
+      {
+        "role": "agent",
+        "content": "Main samajh sakti hoon, par main details sirf Rohan se hi share kar paungi. Main unka number note kar leti hoon, kya main unhe aaj raat 8 baje ke baad call karun?",
+        "timestamp": "2026-11-16T17:34:31.985526+05:30",
+        "function_calls": []
+      },
+      {
+        "role": "user",
+        "content": "Achha theek hai.",
+        "timestamp": "2026-11-16T17:34:32.999748+05:30"
+      },
+      {
+        "role": "agent",
+        "content": "Theek hai, main note kar leti hoon ki Rohan se aaj raat 8 baje ke baad baat karni hai. Thank you, goodbye.",
+        "timestamp": "2026-11-16T17:34:33.603674+05:30",
+        "function_calls": [
+          {
+            "name": "end_call",
+            "result": {
+              "status": "call_ended"
+            },
+            "is_mock": true
+          }
+        ]
+      }
+    ],
+    "post_call": {
+      "outcome": {
+        "value": "callback_scheduled",
+        "comment": "The lead's father stated Rohan is available after 8 PM and the agent agreed to call then."
+      },
+      "opted_out": {
+        "value": false,
+        "comment": "L1 decision model, p=0.94"
+      },
+      "site_visit_booking_ref": {
+        "value": "",
+        "comment": "No site visit was booked."
+      },
+      "site_visit_slot": {
+        "value": "",
+        "comment": "No site visit was booked."
+      },
+      "callback_time": {
+        "value": "Shaam ko 8 baje ke baad",
+        "comment": "The father specified Rohan is available after 8 PM."
+      },
+      "budget_confirmed": {
+        "value": "",
+        "comment": "Budget was not discussed."
+      },
+      "budget_fit": {
+        "value": "unknown",
+        "comment": "Budget not discussed."
+      },
+      "config_interest": {
+        "value": "",
+        "comment": "Configuration not discussed."
+      },
+      "buyer_purpose": {
+        "value": "unknown",
+        "comment": "Purpose not discussed."
+      },
+      "purchase_timeline": {
+        "value": "unknown",
+        "comment": "Timeline not discussed."
+      },
+      "home_loan": {
+        "value": "unknown",
+        "comment": "Loan status not discussed."
+      },
+      "objections_raised": {
+        "value": "",
+        "comment": "No objections raised by the lead; the father asked for price but was politely declined."
+      },
+      "unanswered_questions": {
+        "value": "",
+        "comment": "No questions were left for the sales manager to answer."
+      },
+      "competitors_mentioned": {
+        "value": "",
+        "comment": "No competitors mentioned."
+      },
+      "language_used": {
+        "value": "hinglish",
+        "comment": "The conversation was conducted in a mix of Hindi and English."
+      },
+      "closer_summary": {
+        "value": "The agent spoke with Rohan's father, Suresh. The father stated Rohan is unavailable and will be reachable after 8 PM. The agent politely declined to share project details with the father and scheduled a callback for Rohan.",
+        "comment": "Summary of the interaction."
+      },
+      "next_best_action": {
+        "value": "Call Rohan today after 8 PM.",
+        "comment": "The agreed next step is to call the lead at the specified time."
+      },
+      "lead_score": {
+        "value": 0,
+        "comment": "Default value."
+      },
+      "lead_temperature": {
+        "value": "",
+        "comment": "Computed after the call."
+      },
+      "lead_priority": {
+        "value": "",
+        "comment": "Computed after the call."
+      }
+    },
+    "analysisStatus": "ok",
+    "isTestSucceed": true,
+    "testResultSummary": "PASS: The agent correctly identified the caller as the father, refused to disclose price/details, noted the callback time (after 8 PM), remained polite using respectful language, and ended the call without calling any booking functions.",
+    "isPerformedLikeUser": true,
+    "createdAt": "2026-11-16T12:05:08.877Z",
+    "updatedAt": "2026-11-16T12:05:08.877Z",
+    "__v": 0
+  },
+  {
+    "_id": "6afaf14ca2789900015c4af3",
+    "simulationbatchId": "6afaf14c304087b932c62306",
+    "testcaseId": {
+      "_id": "6afae7511aeb81cc61f326cd",
+      "testcaseName": "[P1][FLOW:callback][OK] Lead is driving; agent takes a callback time without pitching"
+    },
+    "agentId": null,
+    "userId": "6afae43a02881e33c0efa2f0",
+    "versionId": {
+      "_id": "6afaf148b4ebdc59b459da31",
+      "versionName": "v10-no-ask-and-hangup"
+    },
+    "total_turns": 3,
+    "ended_by": "agent_end_call",
+    "duration_seconds": 46.1,
+    "simulation_seconds": 4.85,
+    "agent_model": "gemma26",
+    "simulator_model": "gpt-5.6-luna",
+    "use_mock_functions": false,
+    "agent_cost": 1.52107,
+    "simulator_cost": 0.124265,
+    "analysis_cost": 0.12789,
+    "total_cost": 1.773225,
+    "functions_called": [
+      {
+        "name": "prepare_call_context",
+        "timestamp": "2026-11-16T17:34:28.723667+05:30",
+        "success": true,
+        "error": null,
+        "is_mock": true
+      }
+    ],
+    "transcript": [
+      {
+        "role": "agent",
+        "content": "Hello.",
+        "timestamp": "2026-11-16T17:34:28.730446+05:30",
+        "function_calls": []
+      },
+      {
+        "role": "user",
+        "content": "Hello?",
+        "timestamp": "2026-11-16T17:34:29.729091+05:30"
+      },
+      {
+        "role": "agent",
+        "content": "Good evening! Rohan ji, main Ananya bol rahi hoon Bluepoint Homes se. Aapne 99acres par Bluepoint Skyline Residences, Kharadi ke liye enquiry ki thi, kya ye baat karne ke liye sahi time hai?",
+        "timestamp": "2026-11-16T17:34:30.467838+05:30",
+        "function_calls": []
+      },
+      {
+        "role": "user",
+        "content": "Abhi drive kar raha hoon yaar, baad mein baat karte hain.",
+        "timestamp": "2026-11-16T17:34:31.425272+05:30"
+      },
+      {
+        "role": "agent",
+        "content": "Bilkul, driving ke waqt baat karna sahi nahi hai. Main kab call kar sakti hoon?",
+        "timestamp": "2026-11-16T17:34:31.746721+05:30",
+        "function_calls": []
+      },
+      {
+        "role": "user",
+        "content": "Aaj raat 9 baje ke baad.",
+        "timestamp": "2026-11-16T17:34:32.908470+05:30"
+      },
+      {
+        "role": "agent",
+        "content": "Theek hai, aaj raat 9 baje ke baad. Maine note kar liya hai, hamari team aapko tabhi call karegi. Thank you, goodbye!",
+        "timestamp": "2026-11-16T17:34:33.573406+05:30",
+        "function_calls": [
+          {
+            "name": "end_call",
+            "result": {
+              "status": "call_ended"
+            },
+            "is_mock": true
+          }
+        ]
+      }
+    ],
+    "post_call": {
+      "outcome": {
+        "value": "callback_scheduled",
+        "comment": "The lead was driving and requested a callback tonight after 9 PM, which the agent noted."
+      },
+      "opted_out": {
+        "value": false,
+        "comment": "L1 decision model, p=0.95"
+      },
+      "site_visit_booking_ref": {
+        "value": "",
+        "comment": "No site visit was booked."
+      },
+      "site_visit_slot": {
+        "value": "",
+        "comment": "No site visit was booked."
+      },
+      "callback_time": {
+        "value": "Aaj raat 9 baje ke baad",
+        "comment": "Lead explicitly asked to be called back tonight after 9 PM."
+      },
+      "budget_confirmed": {
+        "value": "",
+        "comment": "Budget was not discussed."
+      },
+      "budget_fit": {
+        "value": "unknown",
+        "comment": "Budget not discussed."
+      },
+      "config_interest": {
+        "value": "",
+        "comment": "Configuration not discussed."
+      },
+      "buyer_purpose": {
+        "value": "unknown",
+        "comment": "Purpose not discussed."
+      },
+      "purchase_timeline": {
+        "value": "unknown",
+        "comment": "Timeline not discussed."
+      },
+      "home_loan": {
+        "value": "unknown",
+        "comment": "Financing not discussed."
+      },
+      "objections_raised": {
+        "value": "",
+        "comment": "No objections raised; lead was simply busy driving."
+      },
+      "unanswered_questions": {
+        "value": "",
+        "comment": "No questions were asked by the lead."
+      },
+      "competitors_mentioned": {
+        "value": "",
+        "comment": "No competitors mentioned."
+      },
+      "language_used": {
+        "value": "hinglish",
+        "comment": "The conversation was conducted in a mix of Hindi and English."
+      },
+      "closer_summary": {
+        "value": "Rohan is an enquiry from 99acres for Skyline Residences. He was driving during the call and requested a callback tonight after 9 PM. The call ended quickly as agreed.",
+        "comment": "Summary of the interaction."
+      },
+      "next_best_action": {
+        "value": "Call Rohan tonight after 9 PM as requested.",
+        "comment": "Direct action based on the callback request."
+      },
+      "lead_score": {
+        "value": 0,
+        "comment": "Default value."
+      },
+      "lead_temperature": {
+        "value": "",
+        "comment": "Computed after the call."
+      },
+      "lead_priority": {
+        "value": "",
+        "comment": "Computed after the call."
+      }
+    },
+    "analysisStatus": "ok",
+    "isTestSucceed": true,
+    "testResultSummary": "PASS: The agent did not pitch while the lead was driving, correctly captured and repeated the callback time ('aaj raat 9 baje ke baad'), did not claim a system scheduled it (only said 'note kar liya'), and ended the call immediately using end_call within two turns.",
+    "isPerformedLikeUser": true,
+    "createdAt": "2026-11-16T12:05:08.466Z",
+    "updatedAt": "2026-11-16T12:05:08.466Z",
+    "__v": 0
+  },
+  {
+    "_id": "6afaf14ca2789900015c4af1",
+    "simulationbatchId": "6afaf14c304087b932c62306",
+    "testcaseId": {
+      "_id": "6afae74bb4ebdc59b459bc23",
+      "testcaseName": "[P0][U6:opt-out][OK] Lead says stop calling mid-pitch; one-line apology and end_call, no retention"
+    },
+    "agentId": null,
+    "userId": "6afae43a02881e33c0efa2f0",
+    "versionId": {
+      "_id": "6afaf148b4ebdc59b459da31",
+      "versionName": "v10-no-ask-and-hangup"
+    },
+    "total_turns": 2,
+    "ended_by": "agent_end_call",
+    "duration_seconds": 43.1,
+    "simulation_seconds": 3.72,
+    "agent_model": "gemma26",
+    "simulator_model": "gpt-5.6-luna",
+    "use_mock_functions": false,
+    "agent_cost": 1.13755,
+    "simulator_cost": 0.085555,
+    "analysis_cost": 0.157242,
+    "total_cost": 1.380347,
+    "functions_called": [
+      {
+        "name": "prepare_call_context",
+        "timestamp": "2026-11-16T17:34:28.706174+05:30",
+        "success": true,
+        "error": null,
+        "is_mock": true
+      }
+    ],
+    "transcript": [
+      {
+        "role": "agent",
+        "content": "Hello.",
+        "timestamp": "2026-11-16T17:34:28.712314+05:30",
+        "function_calls": []
+      },
+      {
+        "role": "user",
+        "content": "Haan, kaun?",
+        "timestamp": "2026-11-16T17:34:29.909047+05:30"
+      },
+      {
+        "role": "agent",
+        "content": "Good evening, Rohan ji. Main Ananya bol rahi hoon Bluepoint Homes se. Aapne 99acres par Bluepoint Skyline Residences, Kharadi ke liye enquiry ki thi, toh usi ke baare mein baat karni thi. Kya yeh do minute baat karne ke liye sahi time hai?",
+        "timestamp": "2026-11-16T17:34:30.677933+05:30",
+        "function_calls": []
+      },
+      {
+        "role": "user",
+        "content": "Dekho, maine already flat le liya hai. Mujhe dobara call mat karna, mera number apni list se hata do.",
+        "timestamp": "2026-11-16T17:34:31.753067+05:30"
+      },
+      {
+        "role": "agent",
+        "content": "I am so sorry for the disturbance, Rohan ji. Main abhi aapka number list se hata deti hoon taaki aapko dobara call na aaye.",
+        "timestamp": "2026-11-16T17:34:32.424650+05:30",
+        "function_calls": [
+          {
+            "name": "end_call",
+            "result": {
+              "status": "call_ended"
+            },
+            "is_mock": true
+          }
+        ]
+      }
+    ],
+    "post_call": {
+      "outcome": {
+        "value": "opted_out",
+        "comment": "The lead explicitly asked to be removed from the list and not called again."
+      },
+      "opted_out": {
+        "value": true,
+        "comment": "L1 decision model, p=0.95"
+      },
+      "site_visit_booking_ref": {
+        "value": "",
+        "comment": "No booking was made."
+      },
+      "site_visit_slot": {
+        "value": "",
+        "comment": "No booking was made."
+      },
+      "callback_time": {
+        "value": "",
+        "comment": "No callback was requested."
+      },
+      "budget_confirmed": {
+        "value": "",
+        "comment": "Budget was not discussed."
+      },
+      "budget_fit": {
+        "value": "unknown",
+        "comment": "Budget was not discussed."
+      },
+      "config_interest": {
+        "value": "",
+        "comment": "Lead already bought a flat elsewhere; no specific configuration for this project was discussed."
+      },
+      "buyer_purpose": {
+        "value": "unknown",
+        "comment": "Not discussed."
+      },
+      "purchase_timeline": {
+        "value": "unknown",
+        "comment": "Not discussed."
+      },
+      "home_loan": {
+        "value": "unknown",
+        "comment": "Not discussed."
+      },
+      "objections_raised": {
+        "value": "",
+        "comment": "No objections to the project itself, just an opt-out because they already purchased a flat."
+      },
+      "unanswered_questions": {
+        "value": "",
+        "comment": "No questions were asked by the lead."
+      },
+      "competitors_mentioned": {
+        "value": "",
+        "comment": "No specific competitors mentioned."
+      },
+      "language_used": {
+        "value": "hinglish",
+        "comment": "The conversation was conducted in a mix of Hindi and English."
+      },
+      "closer_summary": {
+        "value": "Rohan stated he has already purchased a flat and requested to be removed from the calling list. The agent acknowledged the request and ended the call.",
+        "comment": "Factual summary of the interaction."
+      },
+      "next_best_action": {
+        "value": "Remove number from calling list.",
+        "comment": "Lead explicitly opted out."
+      },
+      "lead_score": {
+        "value": 0,
+        "comment": "Default value."
+      },
+      "lead_temperature": {
+        "value": "",
+        "comment": "Computed after the call."
+      },
+      "lead_priority": {
+        "value": "",
+        "comment": "Computed after the call."
+      }
+    },
+    "analysisStatus": "ok",
+    "isTestSucceed": true,
+    "testResultSummary": "PASS: The agent responded to the opt-out with a short apology, confirmed the removal of the number, made no further pitch or questions, and called end_call in the same turn. No forbidden functions were called.",
+    "isPerformedLikeUser": true,
+    "createdAt": "2026-11-16T12:05:06.793Z",
+    "updatedAt": "2026-11-16T12:05:06.793Z",
+    "__v": 0
+  }
+]
